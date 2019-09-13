@@ -6,20 +6,31 @@ const apiKey = "&appid=b11149c6eb203b39d0dd88f337b6bb1d";
 const appId = '051a355de07a390b85fc206f36202cca';
 function searchCoord(apiURL, apiKey, searchTerm) {
     sendGetRequest(`${apiURL}${searchTerm}${apiKey}`, function (responseData1) {
-        var coord = responseData1['coord'];
-        lat = coord['lat'];
-        lon = coord['lon'];
+        var coord = responseData1["coord"];
+        lat = coord["lat"];
+        lon = coord["lon"];
     })
 }
+
+
 function getTime(searchTime) {
     if (searchTime == '') {
         var d = new Date();
-        timeee = d.getTime()
+        k = d.getTime();
+        timeee = k/1000;
+    }
+    else {
+        var day = searchTime.substring(0, 2);
+        var month = searchTime.substring(3, 5);
+        var year = searchTime.substring(6, 10);
+        var x = new Date(`${month} ${day} ${year}`);
+        var h = x.getTime();
+        timeee = h/1000;
     }
 }
 
 
-function searchWeather() {
+function searchWeather(appId,lat,lon,timeee) {
     sendGetRequest(`https://api.darksky.net/forecast/${appId}/${lat},${lon},${timeee}`, function (responseData2) {
         var currently = responseData2['currently'];
         var timezone = responseData2['timezone'];
@@ -38,9 +49,9 @@ function searchWeather() {
 document.getElementById('searchBtn').addEventListener('click', function () {
     var searchTerm = document.getElementById('searchInput').value;
     var searchTime = document.getElementById('searchTime').value;
-    searchCoord(apiURL, apiKey, searchTerm);
+    searchCoord(apiURL, apiKey, searchTerm).then();
     getTime(searchTime);
-    searchWeather();
+    searchWeather(appId,lat,lon,timeee);
 });
 
 
