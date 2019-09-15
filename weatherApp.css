@@ -1,0 +1,112 @@
+.logo {
+    position: absolute;
+    left: 50px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 0px;
+    color: #FEF870;
+}
+
+.font{
+position: absolute;
+width: 1300px;
+height: 100px;
+left: 0px;
+top: 0px;
+background: #88C6FF;
+}
+
+.search{
+    position: absolute;
+    width: 300px;
+    height: 60px;
+    left: 800px;
+    top: 10px;
+    background: #FFFFFF;
+    border-radius: 50px;
+}
+
+#searchBtn{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 1045px;
+    top: 10px;
+    border-radius: 50px;
+    background-size: contain;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6zVrG7xJF3MbM-0AtB6x0hrQimNMU3tmwxNEdBN5N16REewEzAQ)
+}
+
+
+
+#image_of_tab1 {
+    position: absolute;
+    width: 1300px;
+    height: 495px;
+    top: 102px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6zVrG7xJF3MbM-0AtB6x0hrQimNMU3tmwxNEdBN5N16REewEzAQ)  
+}
+
+#hr{
+    position: absolute;
+    width: 1295px;
+    height: 300px;
+    left: 0px;
+    top: 600px;
+    background: #212121;
+    
+}
+
+.abtus{
+    position: absolute;
+    width: 330px;
+    height: 47px;
+    left: 28px;
+    top: 600px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 56px;
+    color: #FFFFFF;
+}
+
+.consulting_team{
+    position: absolute;
+    width: 330px;
+    height: 47px;
+    left: 453px;
+    top: 600px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 56px;
+    color: #FFFFFF;
+}
+
+.for_user{
+    position: absolute;
+    width: 330px;
+    height: 47px;
+    left: 982px;
+    top: 600px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 56px;
+    color: #FFFFFF;
+}
+
+#searchInput{
+    width: 300px;
+    height: 60px;
+    left: 800px;
+} 
+.weather{
+    flex-flow: row;
+}
