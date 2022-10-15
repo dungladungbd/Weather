@@ -1,1 +1,3 @@
-# Weather
+# Weather Forecast App
+
+## Brian Do
